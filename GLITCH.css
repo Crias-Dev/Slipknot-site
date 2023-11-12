@@ -13,7 +13,17 @@ body {
   align-items: top;
   transition: background-image 0.5s;
 }
-
+@font-face{
+  font-family: Slipknot;
+  src: url(Sickness.ttf);
+}
+.slipfont{
+  font-family: Slipknot;
+}
+.texto2{
+  color: white;
+  text-align: center;
+}
 ::-webkit-scrollbar {
   width: 12px;
 }
