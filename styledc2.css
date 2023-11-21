@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    min-height: 100vh;
+    background-color: white;
+    overflow: hidden;
+    padding-top: 100px;
+}
+
+.container
+{
+    width: 50%;
+    max-width: 200px;
+    perspective: 900px;
+    margin: auto;
+}
+
+.music-album{
+    transition: 0.5s all ease;
+    transform: rotateX(50deg) scale(0.8);
+    box-shadow: 0 20px 40px white;
+}
+
+.music-album::after{
+    content: '';
+    display: block;
+    background-color: #000;
+    background-image: url(iwoa\ album.jpg);
+    background-size: contain;
+    padding-bottom: 100%;
+}
+
+.music-album:hover{
+    transform:rotate(0deg) scale(1) translateY(10px);
+    transition: 0.7s all ease;
+}
+
+.music-disc{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    transition: 0.5s ease-in-out;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+
+}
+
+.music-album:hover .music-disc{
+    transition: 0.7s ease-in-out 0.3s;
+    left: 55%;
+}
+@-moz-keyframes spin{
+    100%{
+        -moz-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin{
+    100%{
+        -webkit-transform: rotate(360deg) ;
+    }
+}
+
+@keyframes spin{
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container{
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container{
+        max-width: 200px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .container{
+        max-width: 150px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .container{
+        max-width: 120px;
+    }
+}
